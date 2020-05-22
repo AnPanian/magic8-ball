@@ -2,6 +2,7 @@ $(document).ready(function () {
 	var magic8Ball = {}
 	magic8Ball.listOfAnswers = ["Yes", "No", "Try Again Later", "Maybe", "Most Definetly"];
 	var questionButton = document.getElementById("questionButton");
+	var answer = document.getElementById("answer")
 
 	var onClick = function () {
 
@@ -15,9 +16,11 @@ $(document).ready(function () {
 		var randomIndex = Math.floor(randomNumberlistOfAnswers);
 		var answer = this.listOfAnswers[randomIndex];
 
+		$("#answer").text(answer);
+
 		console.log(question);
 		console.log(answer);
 	};
 
 	$("#questionButton").click(onClick);
-});	
+});
